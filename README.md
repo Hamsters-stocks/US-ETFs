@@ -11,7 +11,7 @@ To better simulate the past market, members at the past time points should be us
 
 There are various data brokers which sells historial ETFs data but most of them are expensive for merely retail traders. In sight of this, I find an alternative way of exploring past ETFs constituent by viewing the Wikipedia pages in the past to scrap down the members.
 
-Please be noted that the data from the Wikipedia is not necessarily accurate. I will prepare a estimated stock lists by a regular basis for your backtesting work. If you would like data from a specific time frame, you can take reference of my codes of scrapping to prepare it yourself. (It is very easy and starightforward.)
+Please be noted that the data from the Wikipedia is not necessarily accurate. I will prepare a estimated stock lists by a regular basis for your reference. If you would like data from a specific time frame, you can do the scrapping yourself. (It is very easy and starightforward. I have prepared a reference code but the format of Wikepedia changes from time to time. As I have not mastered the coding skills, please give advices if you got any better ways to do it.)
 
 If you wish to pursue more accurate results and data, here are some some subscribtion pages for you:
 1. Gurufocus 
