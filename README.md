@@ -1,5 +1,5 @@
 # US-ETFs
-Historical ETFs members for US ETFs
+Historical ETFs members for US index funds.
 
 For all retail investors, I hope you will find the data on this page useful for your trading.
 
