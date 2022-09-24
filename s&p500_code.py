@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 # Here is an another way to deducing the past ETFs members
-# As S&P500 is relatively stable to seldom make changes, we can work out the path of the evolution of the existing lists by undoing the changes 
+# As S&P500 is relatively stable and seldom make changes, we can work out the path of the evolution of the existing lists bit by bit.
 
 # Get the S&P 500 members at the moment
 SP500 = requests.get('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies#Selected_changes_to_the_list_of_S&P_500_components').text
@@ -33,7 +33,7 @@ df.index = pd.to_datetime(df.index)
 df = df.iloc[3:]
 
 
-# Find the past holdings by undoing every changes (Remove the new added ones and restore the deleted ones)
+# Find the past holdings by undoing every change (Remove the newly added ones and restore the deleted ones)
 sp = pd.DataFrame(data=None)
 for Date, rows in df.iterrows():
     try:
