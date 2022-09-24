@@ -15,6 +15,7 @@ An alternative way of exploring past ETFs constituent is to view the historical 
 
 Please be noted that the data from the Wikipedia is not necessarily accurate. I will prepare a estimated stock lists by a regular basis for your reference. If you would like data from a specific time frame, you can do the scrapping yourself. (It is very easy and starightforward. I have prepared a reference code but the format of Wikepedia changes from time to time. As I have not mastered the coding skills, please give advices if you got any better ways to do it.)
 
+Some of the stocks in the lists maybe delisted or renamed that historical price data maybe no longer available. 
 If you wish to pursue more accurate results and data, here are some some subscribtion pages for you:
 1. Gurufocus 
 2. Alphaquery
