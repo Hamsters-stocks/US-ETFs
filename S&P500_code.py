@@ -2,6 +2,10 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 
+# Here is an another way to deducing the past ETFs members
+# As S&P500 is relatively stable to seldom make changes, we can work out the path of the evolution of the existing lists by undoing the changes 
+
+# Get the S&P 500 members at the moment
 SP500 = requests.get('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies#Selected_changes_to_the_list_of_S&P_500_components').text
 soup = BeautifulSoup(SP500,'lxml')
 List = soup.find('table')
@@ -11,6 +15,7 @@ for ticker in tickers:
     if ticker.text != 'reports':
         final.append(ticker.text)
 
+# Get the changes of the list in the past 
 SP500_changes = requests.get('https://en.wikipedia.org/wiki/List_of_S%26P_500_companies#Selected_changes_to_the_list_of_S&P_500_components').text
 soup1 = BeautifulSoup(SP500_changes,'lxml')
 Listraw = soup1.find_all('table')
@@ -27,8 +32,8 @@ df.set_index('date', inplace = True)
 df.index = pd.to_datetime(df.index)
 df = df.iloc[3:]
 
-print(final)
-print(df)
+
+# Find the past holdings by undoing every changes (Remove the new added ones and restore the deleted ones)
 sp = pd.DataFrame(data=None)
 for Date, rows in df.iterrows():
     try:
@@ -42,4 +47,5 @@ for Date, rows in df.iterrows():
     except:
         continue
 
-print(sp)
+ 
+sp.to_csv('S&P500.csv')
