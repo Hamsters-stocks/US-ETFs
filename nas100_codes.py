@@ -5,6 +5,7 @@ import pandas as pd
 # The following codes is a simplified reference for scapping the page (https://en.wikipedia.org/wiki/Nasdaq-100).
 # It will work for the historical page of 2008 - 2016. 
 # I am still figuring out ways to have a program works for all years. Sorry for the inconvience.
+# Other ETFs can be scrapped with similar ways
 
 final = pd.DataFrame(data=None)
 while(True):
